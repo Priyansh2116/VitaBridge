@@ -6,6 +6,18 @@ VitaBridge is a native macOS companion for [VitaPad-NG](https://github.com/bclar
 
 > **Early release:** the maintainer reports Wi-Fi connectivity and native USB input working on a real Vita. Automated tests cover the protocol and simulator. USB button mappings still need checking, and compatibility with individual games is not guaranteed. See [verification](docs/VERIFICATION.md).
 
+## Recommended connection: USB
+
+**Use USB DualShock 4 mode for native controller support, including in Astris.** The Vita presents a gamepad directly to macOS, and compatible games receive its input without keyboard/mouse translation. Check the game's controller selection and button mappings; compatibility is still consumer-dependent.
+
+**Wi-Fi currently works as a configurable keyboard/mouse bridge, not a wireless gamepad.** Seeing input in VitaBridge's Controller Test confirms reception, but does not mean a game has received controller input.
+
+| Connection | What the game receives | Best use |
+| --- | --- | --- |
+| USB, as a DualShock 4 | Native gamepad input, where the game recognizes it | **Preferred** for controller-enabled games and emulators |
+| Wi-Fi with Keyboard / Mouse enabled | Mapped keyboard presses, mouse movement and mouse clicks | Games configured for keyboard/mouse controls |
+| Wi-Fi in Monitor Only, or with output paused | No injected input | Input visualization and diagnostics |
+
 ## What works
 
 - **Wi-Fi input:** LAN discovery, manual private IPv4, NG V2 TCP validation, UDP streaming, heartbeat, polling fallback and automatic reconnection.
@@ -51,16 +63,29 @@ Local builds are ad-hoc signed, hardened-runtime enabled and **not notarized**. 
 
 ## Connect over Wi-Fi
 
+### How the current implementation works
+
+VitaPad-NG sends buttons, sticks and available touch/motion/battery data over the LAN. VitaBridge decodes that data for live monitoring. When you explicitly enable **Keyboard / Mouse** output, the mapping engine converts configured controls into CoreGraphics keyboard and mouse events sent to the **focused application**. The default left stick sends WASD and the right stick moves the mouse; these are not gamepad axes delivered to the game. Touch and motion visualization do not automatically become game gestures or gyro aiming.
+
+This build **does not publish a virtual Xbox, PlayStation or other game controller over Wi-Fi**. A game may continue to display keyboard prompts, and a controller-only input selection will not receive this mapped output. Use the game's keyboard/mouse settings and match its bindings to your VitaBridge profile. For native gamepad use in Astris, use the recommended USB path instead.
+
+The missing wireless virtual-gamepad backend requires legitimate Apple virtual-HID authorization/provisioning, implementation and separate consumer testing. Granting Accessibility access enables keyboard/mouse injection only; it does not unlock wireless gamepad output.
+
+### Enable Wi-Fi keyboard/mouse output
+
 1. [Download VitaPad-NG v1.9.2's VitaPad.vpk](https://github.com/bclarke123/VitaPad-NG/releases/download/v1.9.2/VitaPad.vpk) and install it on the Vita using your existing homebrew installer. Its VPK includes its kernel module. No separate kernel-plugin configuration is needed for the inspected NG release.
 2. Enable **Unsafe Homebrew** in the Vita's HENkaku Settings, as required by NG, then open VitaPad.
 3. Join the same trusted private LAN as your Mac. In VitaPad, hold **L + R + Start**, choose **Connection → Wi-Fi**, then press Start to save.
 4. In VitaBridge, click **Discover**, or enter the IP shown on the Vita and click **Connect**.
 5. Open **Controller Test** and check your controls before enabling output.
-6. To control a keyboard/mouse game, choose **Keyboard / Mouse** and **Keyboard Gaming** (or FPS Keyboard/Mouse). Read the permission explanation in Settings, grant Accessibility, explicitly **Enable Keyboard / Mouse**, then focus the game.
+6. To control a keyboard/mouse game, choose **Keyboard / Mouse** and **Keyboard Gaming** (or **FPS Keyboard/Mouse** for mouse clicks). Read the permission explanation in Settings, grant Accessibility, explicitly **Enable Keyboard / Mouse**, then focus the game. Do not select **Standard Gamepad** expecting wireless controller output; it is an inert template.
+7. Configure the game for keyboard/mouse input and match its bindings to the profile. After changing profiles, mappings or output mode, click **Enable Keyboard / Mouse** again because those changes pause output.
+
+For Accessibility: open **VitaBridge → Settings → Grant Accessibility…**, then **macOS System Settings → Privacy & Security → Accessibility** and enable VitaBridge. If it is missing, add the built `VitaBridge.app` using **+**. Quit/reopen the app if the permission status does not refresh, then explicitly re-enable output. Monitoring and native USB input do not need this permission.
 
 The Mac initiates TCP 5000 and UDP 5001 to the Vita; discovery uses UDP 5000. NG app 1.9+ streams UDP, while older V2 versions fall back to TCP polling. The protocol is unauthenticated: only enable injection on a trusted network. Packet spacing is shown as a receive interval, **not measured network latency**.
 
-## Connect over USB
+## Connect over USB (preferred)
 
 1. Pause/disconnect Wi-Fi output in VitaBridge.
 2. On the Vita, hold **L + R + Start**, select **Connection → USB, as a DualShock 4**, and press Start to save.
@@ -84,7 +109,9 @@ The controller may be named DualShock 4, PS4 Controller or Wireless Controller e
 | Start / Select | Return / Tab |
 | D-pad | Arrow keys |
 
-FPS Keyboard/Mouse changes L/R to right/left mouse. **Standard Gamepad is a template, not a wireless virtual controller.** Save changes in Mapping Editor. Profiles live at `~/Library/Application Support/VitaBridge/profiles.json`. USB mappings are handled by the Vita, macOS or the receiving game; VitaBridge's keyboard editor does not rewrite the native USB device.
+**Mouse clicks:** Keyboard Gaming has no default mouse-click binding; R sends Left Control. Choose **FPS Keyboard/Mouse** for **R → left-click** and **L → right-click**, then re-enable output. You can assign **Left Mouse** or **Right Mouse** to another input in Mapping Editor, save, and re-enable output.
+
+**Standard Gamepad is a template, not a wireless virtual controller.** Save changes in Mapping Editor. Profiles live at `~/Library/Application Support/VitaBridge/profiles.json`. USB mappings are handled by the Vita, macOS or the receiving game; VitaBridge's keyboard editor does not rewrite the native USB device.
 
 ## Try without hardware
 
