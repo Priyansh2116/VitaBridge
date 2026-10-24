@@ -6,6 +6,15 @@
 
 <p align="center"><strong>Use your PlayStation Vita with your Mac.</strong></p>
 
+## Downloads
+
+| Install on | Download |
+| --- | --- |
+| **Mac — VitaBridge** | **[Download source ZIP](https://github.com/Priyansh2116/VitaBridge/archive/refs/heads/main.zip)** · [Build and launch instructions](#build-and-launch) |
+| **PS Vita — VitaPad-NG** | **[Download VitaPad.vpk (v1.9.2)](https://github.com/bclarke123/VitaPad-NG/releases/download/v1.9.2/VitaPad.vpk)** · [Upstream release page](https://github.com/bclarke123/VitaPad-NG/releases/tag/v1.9.2) |
+
+**Mac download status:** a prebuilt VitaBridge app has not been published to [GitHub Releases](https://github.com/Priyansh2116/VitaBridge/releases) yet. The Mac link above downloads source code, which requires Xcode to build. Install the VitaPad-NG VPK on your **Vita using VitaShell**, not on your Mac.
+
 VitaBridge is a native macOS companion for [VitaPad-NG](https://github.com/bclarke123/VitaPad-NG): receive controller input over Wi-Fi, create keyboard/mouse profiles, and inspect the Vita's native USB controller input. Built with Swift 6, SwiftUI, Network.framework, GameController and IOKit.
 
 > **Upstream credit:** [VitaPad-NG by bclarke123 and its contributors](https://github.com/bclarke123/VitaPad-NG) provides the Vita-side homebrew, Wi-Fi protocol and native USB controller modes that make this setup possible. VitaBridge is an independently implemented macOS companion; credit for those Vita-side features belongs to the upstream project.
