@@ -8,6 +8,8 @@
 
 VitaBridge is a native macOS companion for [VitaPad-NG](https://github.com/bclarke123/VitaPad-NG): receive controller input over Wi-Fi, create keyboard/mouse profiles, and inspect the Vita's native USB controller input. Built with Swift 6, SwiftUI, Network.framework, GameController and IOKit.
 
+> **Upstream credit:** [VitaPad-NG by bclarke123 and its contributors](https://github.com/bclarke123/VitaPad-NG) provides the Vita-side homebrew, Wi-Fi protocol and native USB controller modes that make this setup possible. VitaBridge is an independently implemented macOS companion; credit for those Vita-side features belongs to the upstream project.
+
 > **Early release:** the maintainer reports Wi-Fi connectivity and native USB input working on a real Vita. Automated tests cover the protocol and simulator. USB button mappings still need checking, and compatibility with individual games is not guaranteed. See [verification](docs/VERIFICATION.md).
 
 ## Recommended connection: USB
@@ -183,4 +185,11 @@ GitHub Actions is configured to run the simulator suite, Xcode tests, universal 
 
 VitaBridge's original code is licensed under the [MIT License](LICENSE). Third-party projects retain their own licenses; this license does not grant rights to VitaPad-NG or other homebrew. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for research attribution and redistribution boundaries.
 
-Thanks to the VitaPad-NG, original VitaPad, VitaOxiPad, OpenJoystickDriver and Steam controller bridge authors for publicly documented protocols and API research. VitaBridge is an independent project, not affiliated with or endorsed by Sony, Apple, Nintendo or Valve. Product names belong to their respective owners.
+### Credits
+
+- **[bclarke123/VitaPad-NG](https://github.com/bclarke123/VitaPad-NG)** — the Vita app used with VitaBridge, its Wi-Fi protocol, USB gamepad/DualShock 4 modes, and the upstream simulator fetched separately for interoperability tests. Thank you to bclarke123 and all upstream contributors.
+- **[Rinnegatamante/VitaPad](https://github.com/Rinnegatamante/VitaPad)** — the original VitaPad project from which VitaPad-NG was forked.
+- **[DvaMishkiLapa/VitaOxiPad](https://github.com/DvaMishkiLapa/VitaOxiPad)** — alternate Vita controller protocol research.
+- **[xsyetopz/OpenJoystickDriver](https://github.com/xsyetopz/OpenJoystickDriver)**, **[runzerobass/SteamControllerBridgeMac](https://github.com/runzerobass/SteamControllerBridgeMac)** and **[tkubicz/steam-controller-bridge](https://github.com/tkubicz/steam-controller-bridge)** — public macOS virtual-HID implementation and consumer-compatibility research; no working virtual-gamepad backend is claimed in VitaBridge.
+
+The homebrew and other upstream code are not bundled or relicensed by VitaBridge. VitaBridge is an independent project, not affiliated with or endorsed by these upstream projects, Sony, Apple, Nintendo or Valve. Product names belong to their respective owners.

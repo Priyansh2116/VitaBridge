@@ -2,6 +2,8 @@
 
 VitaBridge independently implements the VitaPad-NG wire format and uses public macOS frameworks. No external Swift package dependencies, firmware binaries, copied upstream source, HID descriptors, console artwork or upstream simulator source are included in this repository or app. The MIT license applies to original VitaBridge material only.
 
+Primary credit goes to **bclarke123 and the contributors to [VitaPad-NG](https://github.com/bclarke123/VitaPad-NG)** for the Vita-side application, network protocol and native USB controller implementation used by this setup. VitaBridge supplies the separate macOS companion. VitaPad-NG is a fork of **[Rinnegatamante's original VitaPad](https://github.com/Rinnegatamante/VitaPad)**, whose authors also deserve credit for that foundation.
+
 | Project | Relationship | License found at inspected revision |
 | --- | --- | --- |
 | [VitaPad-NG](https://github.com/bclarke123/VitaPad-NG) | Protocol interoperability; user separately installs its VPK; simulator separately fetched for local tests | No root redistribution license found |
