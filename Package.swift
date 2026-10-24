@@ -8,6 +8,6 @@ let package = Package(name: "VitaBridge", platforms: [.macOS(.v14)], products: [
     .target(name: "ControllerEngine", dependencies: ["VitaProtocol"]),
     .target(name: "VitaTransport", dependencies: ["VitaProtocol"]),
     .target(name: "OutputBackends", dependencies: ["VitaProtocol", "ControllerEngine"]),
-    .executableTarget(name: "VitaBridgeApp", dependencies: ["VitaProtocol", "VitaTransport", "ControllerEngine", "OutputBackends"]),
+    .executableTarget(name: "VitaBridgeApp", dependencies: ["VitaProtocol", "VitaTransport", "ControllerEngine", "OutputBackends"], exclude: ["Assets.xcassets"]),
     .testTarget(name: "VitaBridgeTests", dependencies: ["VitaProtocol", "ControllerEngine", "VitaTransport", "OutputBackends"])
 ])

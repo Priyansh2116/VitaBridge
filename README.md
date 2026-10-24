@@ -1,6 +1,10 @@
-# VitaBridge
+<p align="center">
+  <img src="docs/assets/vitabridge-logo.png" alt="VitaBridge — a blue handheld controller with a bridge emblem" width="128" height="128">
+</p>
 
-**Use your PlayStation Vita with your Mac.**
+<h1 align="center">VitaBridge</h1>
+
+<p align="center"><strong>Use your PlayStation Vita with your Mac.</strong></p>
 
 VitaBridge is a native macOS companion for [VitaPad-NG](https://github.com/bclarke123/VitaPad-NG): receive controller input over Wi-Fi, create keyboard/mouse profiles, and inspect the Vita's native USB controller input. Built with Swift 6, SwiftUI, Network.framework, GameController and IOKit.
 
@@ -30,6 +34,24 @@ VitaBridge is a native macOS companion for [VitaPad-NG](https://github.com/bclar
 - **Hardware-free demo:** an original loopback simulator exercises the production TCP/UDP decoder and mapping pipeline.
 
 **Wireless virtual-gamepad output is unavailable.** This build does not have Apple's restricted virtual-HID authorization/provisioning. Wi-Fi supplies keyboard/mouse output; native gamepad input uses USB. No SIP changes, third-party Mac driver or administrator privileges are required for normal use.
+
+## Screenshots
+
+Captured from the app's production SwiftUI views with **live loopback demo input** and **output paused**. These images illustrate the interface, not game compatibility or real-device network performance. Native USB inventory, if shown, reflects devices present at capture time.
+
+### Dashboard
+
+Connection status, receive statistics, profile selection and controller discovery.
+
+![VitaBridge Dashboard showing labelled simulated UDP input, connection statistics and paused output](docs/assets/dashboard.png)
+
+### Controller Test
+
+Live button highlights, both sticks, touch contacts and motion/packet diagnostics.
+
+![VitaBridge Controller Test showing simulated button, stick, front/rear touch and motion input](docs/assets/controller-test.png)
+
+The original logo and screenshot regeneration instructions are in [docs/assets](docs/assets/README.md).
 
 ## Requirements
 

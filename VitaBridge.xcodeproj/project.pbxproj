@@ -16,6 +16,7 @@
 		250D287DFE42AFCAEC13915A /* InputMappingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF455A39D44775FFC5E860 /* InputMappingEngine.swift */; };
 		2DD990F5287E6A2FF437D67F /* VitaProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D5D6E3528E6EDDC06224D2 /* VitaProtocol.framework */; };
 		47CB4A277F51B27898F5A030 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD9024E12C97BB4CFFE4F0 /* SettingsView.swift */; };
+		4AABF944C978849AD85D0433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8683AEE7970F7D6640BD821D /* Assets.xcassets */; };
 		59F3CC3EDD6D8374C2FBE2E7 /* NativeUSBControllerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37E6B4AA8A4AD27B82D784 /* NativeUSBControllerObserver.swift */; };
 		5E30991515032899998AC831 /* ControllerOutputBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A7A44CB53B9D4BD0C9DC5 /* ControllerOutputBackend.swift */; };
 		6321A6846AB3782729675C7E /* ControllerEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1130ADAAE609FE2FA05C4F5B /* ControllerEngine.framework */; };
@@ -129,6 +130,7 @@
 		6ACDF4DF0F2E9E4B7B4C4354 /* VitaBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VitaBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F5B36294657F17C7ACDF41 /* ConnectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTests.swift; sourceTree = "<group>"; };
 		7CCBBA28BFE2C9F09312579F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8683AEE7970F7D6640BD821D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87BF455A39D44775FFC5E860 /* InputMappingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMappingEngine.swift; sourceTree = "<group>"; };
 		89DD9024E12C97BB4CFFE4F0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9348DA8EB4A3CE5146038C6A /* VitaBridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaBridgeApp.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				B28F223AB91913CFA049619A /* AppModel.swift */,
+				8683AEE7970F7D6640BD821D /* Assets.xcassets */,
 				7CCBBA28BFE2C9F09312579F /* ContentView.swift */,
 				486726422FA2B724BF91BE03 /* MappingEditorView.swift */,
 				89DD9024E12C97BB4CFFE4F0 /* SettingsView.swift */,
@@ -266,6 +269,7 @@
 			buildConfigurationList = 649272A11C84742FE1315F76 /* Build configuration list for PBXNativeTarget "VitaBridge" */;
 			buildPhases = (
 				8938E6BDEA1DA0BD4CFFDC56 /* Sources */,
+				B27D475AB42CCF8C802DCF9E /* Resources */,
 				3FCFDE97BCEC632CCC5BC9A9 /* Frameworks */,
 			);
 			buildRules = (
@@ -429,6 +433,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B27D475AB42CCF8C802DCF9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AABF944C978849AD85D0433 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		21B01694B1230A84D03292DD /* Sources */ = {

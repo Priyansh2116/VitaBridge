@@ -7,6 +7,9 @@ import OutputBackends
 struct ContentView: View {
     @EnvironmentObject var model: AppModel
     @State private var page = "Dashboard"
+    init(initialPage: String = "Dashboard") {
+        _page = State(initialValue: initialPage)
+    }
     var body: some View {
         NavigationSplitView {
             VStack(alignment:.leading,spacing:8) {
