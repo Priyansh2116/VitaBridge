@@ -6,6 +6,8 @@ Read the upstream README for your exact firmware release. The inspected NG relea
 
 ## Which download to install
 
+**[Download VitaPad.vpk — VitaPad-NG v1.9.2](https://github.com/bclarke123/VitaPad-NG/releases/download/v1.9.2/VitaPad.vpk)** — install on the Vita, not on your Mac.
+
 Use **VitaPad-NG from bclarke123**, whose inspected [v1.9.2 release](https://github.com/bclarke123/VitaPad-NG/releases/tag/v1.9.2) includes `VitaPad.vpk` under Assets. Transfer that VPK to your Vita and install through VitaShell. The NG VPK includes `module/vitapad_kernel.skprx`, loaded by the app; the inspected release does not require a separate plugin entry in `tai/config.txt`.
 
 `carlelieser/vitapad` is a different USB project with a separate `.skprx` installation procedure. Its files and settings are not interchangeable with this NG setup. Do not combine similarly named plugins based on the shared name.

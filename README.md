@@ -30,6 +30,12 @@ VitaBridge is a native macOS companion for [VitaPad-NG](https://github.com/bclar
 
 The app has been built and launched on Apple Silicon; an arm64/x86_64 universal binary was compiled. Runtime checks on Intel and macOS 14 remain pending.
 
+## Download VitaPad-NG for your Vita
+
+**[Download VitaPad.vpk — VitaPad-NG v1.9.2](https://github.com/bclarke123/VitaPad-NG/releases/download/v1.9.2/VitaPad.vpk)**
+
+Install this file **on your PS Vita using VitaShell**, not on your Mac. It supports the Wi-Fi and USB modes described below and includes its kernel module. Use this NG version rather than another similarly named VitaPad project. If the direct download does not open, use **Assets → VitaPad.vpk** on the [v1.9.2 release page](https://github.com/bclarke123/VitaPad-NG/releases/tag/v1.9.2).
+
 ## Build and launch
 
 The Xcode project is included. No external Swift package dependencies are required.
@@ -45,7 +51,7 @@ Local builds are ad-hoc signed, hardened-runtime enabled and **not notarized**. 
 
 ## Connect over Wi-Fi
 
-1. Install the VitaPad-NG VPK on the Vita using your existing homebrew installer. Obtain it from the [NG releases](https://github.com/bclarke123/VitaPad-NG/releases); its VPK includes its kernel module. No separate kernel-plugin configuration is needed for the inspected NG release.
+1. [Download VitaPad-NG v1.9.2's VitaPad.vpk](https://github.com/bclarke123/VitaPad-NG/releases/download/v1.9.2/VitaPad.vpk) and install it on the Vita using your existing homebrew installer. Its VPK includes its kernel module. No separate kernel-plugin configuration is needed for the inspected NG release.
 2. Enable **Unsafe Homebrew** in the Vita's HENkaku Settings, as required by NG, then open VitaPad.
 3. Join the same trusted private LAN as your Mac. In VitaPad, hold **L + R + Start**, choose **Connection → Wi-Fi**, then press Start to save.
 4. In VitaBridge, click **Discover**, or enter the IP shown on the Vita and click **Connect**.
