@@ -1,0 +1,44 @@
+name: macOS build and test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vitabridge-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+          python3 --version
+      - name: Protocol, mapping and upstream network tests
+        run: ./scripts/test-upstream.sh
+      - name: Xcode XCTest runner
+        run: >-
+          xcodebuild -project VitaBridge.xcodeproj -scheme VitaBridge
+          -destination 'platform=macOS' -derivedDataPath build test
+      - name: Universal app, helper audit and ZIP
+        run: ./scripts/package-release.sh
+      - uses: actions/upload-artifact@v7
+        with:
+          name: VitaBridge-macOS-universal-development
+          path: |
+            dist/VitaBridge-macOS-universal.zip
+            dist/SHA256SUMS
+          if-no-files-found: error
+          retention-days: 14

@@ -1,0 +1,999 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07FF007315C9A40F19F4E26B /* ConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F5B36294657F17C7ACDF41 /* ConnectionTests.swift */; };
+		09621C00B8569B0477CA0059 /* LoopbackSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1B78DD83E074A0F3B64AF /* LoopbackSimulator.swift */; };
+		12D1FBA8D8B8A34F082DD7C1 /* OutputBackends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9983E713CB3A2876F4EBCEB /* OutputBackends.framework */; };
+		13BBBD6222FCE8EDB686B65E /* OutputBackends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9983E713CB3A2876F4EBCEB /* OutputBackends.framework */; };
+		14CE7796CAF7B310ACA0D3E4 /* MappingEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486726422FA2B724BF91BE03 /* MappingEditorView.swift */; };
+		2454220CAF19C346C3C547B9 /* VitaTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE9D0E98FE4D9500D14B89D /* VitaTransport.framework */; };
+		250D287DFE42AFCAEC13915A /* InputMappingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF455A39D44775FFC5E860 /* InputMappingEngine.swift */; };
+		2DD990F5287E6A2FF437D67F /* VitaProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D5D6E3528E6EDDC06224D2 /* VitaProtocol.framework */; };
+		47CB4A277F51B27898F5A030 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD9024E12C97BB4CFFE4F0 /* SettingsView.swift */; };
+		59F3CC3EDD6D8374C2FBE2E7 /* NativeUSBControllerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A37E6B4AA8A4AD27B82D784 /* NativeUSBControllerObserver.swift */; };
+		5E30991515032899998AC831 /* ControllerOutputBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A7A44CB53B9D4BD0C9DC5 /* ControllerOutputBackend.swift */; };
+		6321A6846AB3782729675C7E /* ControllerEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1130ADAAE609FE2FA05C4F5B /* ControllerEngine.framework */; };
+		6FC735FFD8C51BC4E0BA7593 /* ReleaseWatchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07BFBE994BD0094D9BF3F3 /* ReleaseWatchdog.swift */; };
+		7EE4DC700EB7EB39B8045782 /* VitaProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D5D6E3528E6EDDC06224D2 /* VitaProtocol.framework */; };
+		8859D3357A2AFBBBAFE5AB9E /* VitaConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CF7C8DC4A0FC832AD2314 /* VitaConnectionManager.swift */; };
+		A7CE88A94E4C1AD7249DA155 /* ProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC84B45FD9659216D16C74 /* ProtocolTests.swift */; };
+		AD8C0FD238DECB7E9AC52DFE /* VitaTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE9D0E98FE4D9500D14B89D /* VitaTransport.framework */; };
+		B8E2F0C756263996D4A80199 /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851BDA5CDBCC0524452D473 /* Profiles.swift */; };
+		C897CEE5017675E526F1C28E /* ControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186BB15B435F93B2145E04CF /* ControllerState.swift */; };
+		CE753A1F4B0FFAFD9E10BEDC /* VitaBridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9348DA8EB4A3CE5146038C6A /* VitaBridgeApp.swift */; };
+		D09E3A17E6199630CE10DEB9 /* ControllerEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1130ADAAE609FE2FA05C4F5B /* ControllerEngine.framework */; };
+		D53FF5ACA13C6229CA7902BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCBBA28BFE2C9F09312579F /* ContentView.swift */; };
+		D651FD89E5EE47B179053D47 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28F223AB91913CFA049619A /* AppModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19E0B57694082F92AFCF5623 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEC24EC640E766C5352AE22D;
+			remoteInfo = VitaProtocol;
+		};
+		27B9E079E91FC8983CC5AA92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEC24EC640E766C5352AE22D;
+			remoteInfo = VitaProtocol;
+		};
+		4270ACF80FA3E64614CA7F6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEC24EC640E766C5352AE22D;
+			remoteInfo = VitaProtocol;
+		};
+		556DAD32A35F15849965E4F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DBED834919A9A4086281555;
+			remoteInfo = VitaTransport;
+		};
+		5C40442047498C4DE76D4456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 346B6D808DAB13E6AE44FC9B;
+			remoteInfo = ControllerEngine;
+		};
+		6F43640BFE72AB860FC59641 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEC24EC640E766C5352AE22D;
+			remoteInfo = VitaProtocol;
+		};
+		8F8694823683C6F5DBE96669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCED1F5234EB3733E63ABE75;
+			remoteInfo = OutputBackends;
+		};
+		AAEFA1D0EA0CD7C3718CC660 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 346B6D808DAB13E6AE44FC9B;
+			remoteInfo = ControllerEngine;
+		};
+		ABBD4350865E93CF61525FD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DBED834919A9A4086281555;
+			remoteInfo = VitaTransport;
+		};
+		BFD455F30A12704DC0C54C18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 346B6D808DAB13E6AE44FC9B;
+			remoteInfo = ControllerEngine;
+		};
+		E3F8D6A57C4EFA01709F76FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEC24EC640E766C5352AE22D;
+			remoteInfo = VitaProtocol;
+		};
+		F6D1184221235C38545C43B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CB246EF50A7D995D01FE2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCED1F5234EB3733E63ABE75;
+			remoteInfo = OutputBackends;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1130ADAAE609FE2FA05C4F5B /* ControllerEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ControllerEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		186BB15B435F93B2145E04CF /* ControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerState.swift; sourceTree = "<group>"; };
+		3B07BFBE994BD0094D9BF3F3 /* ReleaseWatchdog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseWatchdog.swift; sourceTree = "<group>"; };
+		486726422FA2B724BF91BE03 /* MappingEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingEditorView.swift; sourceTree = "<group>"; };
+		49D1B78DD83E074A0F3B64AF /* LoopbackSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopbackSimulator.swift; sourceTree = "<group>"; };
+		4C3A7A44CB53B9D4BD0C9DC5 /* ControllerOutputBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerOutputBackend.swift; sourceTree = "<group>"; };
+		6ACDF4DF0F2E9E4B7B4C4354 /* VitaBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VitaBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F5B36294657F17C7ACDF41 /* ConnectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTests.swift; sourceTree = "<group>"; };
+		7CCBBA28BFE2C9F09312579F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		87BF455A39D44775FFC5E860 /* InputMappingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMappingEngine.swift; sourceTree = "<group>"; };
+		89DD9024E12C97BB4CFFE4F0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9348DA8EB4A3CE5146038C6A /* VitaBridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaBridgeApp.swift; sourceTree = "<group>"; };
+		9A37E6B4AA8A4AD27B82D784 /* NativeUSBControllerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeUSBControllerObserver.swift; sourceTree = "<group>"; };
+		B15CF7C8DC4A0FC832AD2314 /* VitaConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaConnectionManager.swift; sourceTree = "<group>"; };
+		B28F223AB91913CFA049619A /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		C3EC84B45FD9659216D16C74 /* ProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTests.swift; sourceTree = "<group>"; };
+		C851BDA5CDBCC0524452D473 /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
+		D8D5D6E3528E6EDDC06224D2 /* VitaProtocol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VitaProtocol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE9D0E98FE4D9500D14B89D /* VitaTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VitaTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9983E713CB3A2876F4EBCEB /* OutputBackends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OutputBackends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC93DD65319DE95DBDCA268 /* VitaBridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VitaBridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FCFDE97BCEC632CCC5BC9A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EE4DC700EB7EB39B8045782 /* VitaProtocol.framework in Frameworks */,
+				6321A6846AB3782729675C7E /* ControllerEngine.framework in Frameworks */,
+				2454220CAF19C346C3C547B9 /* VitaTransport.framework in Frameworks */,
+				13BBBD6222FCE8EDB686B65E /* OutputBackends.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8FF9BDD4E2AAE2DB41F0C46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD990F5287E6A2FF437D67F /* VitaProtocol.framework in Frameworks */,
+				D09E3A17E6199630CE10DEB9 /* ControllerEngine.framework in Frameworks */,
+				AD8C0FD238DECB7E9AC52DFE /* VitaTransport.framework in Frameworks */,
+				12D1FBA8D8B8A34F082DD7C1 /* OutputBackends.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0204A288DA4FBBE6595B4416 /* VitaTransport */ = {
+			isa = PBXGroup;
+			children = (
+				49D1B78DD83E074A0F3B64AF /* LoopbackSimulator.swift */,
+				B15CF7C8DC4A0FC832AD2314 /* VitaConnectionManager.swift */,
+			);
+			name = VitaTransport;
+			path = Sources/VitaTransport;
+			sourceTree = "<group>";
+		};
+		065CDE4F5D69B02D5F78DCD0 /* VitaProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				186BB15B435F93B2145E04CF /* ControllerState.swift */,
+			);
+			name = VitaProtocol;
+			path = Sources/VitaProtocol;
+			sourceTree = "<group>";
+		};
+		1D8A465A88B27E71650D6A96 /* VitaBridgeApp */ = {
+			isa = PBXGroup;
+			children = (
+				B28F223AB91913CFA049619A /* AppModel.swift */,
+				7CCBBA28BFE2C9F09312579F /* ContentView.swift */,
+				486726422FA2B724BF91BE03 /* MappingEditorView.swift */,
+				89DD9024E12C97BB4CFFE4F0 /* SettingsView.swift */,
+				9348DA8EB4A3CE5146038C6A /* VitaBridgeApp.swift */,
+			);
+			name = VitaBridgeApp;
+			path = Sources/VitaBridgeApp;
+			sourceTree = "<group>";
+		};
+		45351A4BB50259CB7CDD665E /* OutputBackends */ = {
+			isa = PBXGroup;
+			children = (
+				4C3A7A44CB53B9D4BD0C9DC5 /* ControllerOutputBackend.swift */,
+				9A37E6B4AA8A4AD27B82D784 /* NativeUSBControllerObserver.swift */,
+				3B07BFBE994BD0094D9BF3F3 /* ReleaseWatchdog.swift */,
+			);
+			name = OutputBackends;
+			path = Sources/OutputBackends;
+			sourceTree = "<group>";
+		};
+		648B84123C7899BCD6186FA2 /* ControllerEngine */ = {
+			isa = PBXGroup;
+			children = (
+				87BF455A39D44775FFC5E860 /* InputMappingEngine.swift */,
+				C851BDA5CDBCC0524452D473 /* Profiles.swift */,
+			);
+			name = ControllerEngine;
+			path = Sources/ControllerEngine;
+			sourceTree = "<group>";
+		};
+		9D0DE71788EF389727FB1974 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1130ADAAE609FE2FA05C4F5B /* ControllerEngine.framework */,
+				F9983E713CB3A2876F4EBCEB /* OutputBackends.framework */,
+				6ACDF4DF0F2E9E4B7B4C4354 /* VitaBridge.app */,
+				FCC93DD65319DE95DBDCA268 /* VitaBridgeTests.xctest */,
+				D8D5D6E3528E6EDDC06224D2 /* VitaProtocol.framework */,
+				DBE9D0E98FE4D9500D14B89D /* VitaTransport.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B13869C7C8AA5DD1613EEADF = {
+			isa = PBXGroup;
+			children = (
+				648B84123C7899BCD6186FA2 /* ControllerEngine */,
+				45351A4BB50259CB7CDD665E /* OutputBackends */,
+				1D8A465A88B27E71650D6A96 /* VitaBridgeApp */,
+				B65F743AFEB5D525470DE7C5 /* VitaBridgeTests */,
+				065CDE4F5D69B02D5F78DCD0 /* VitaProtocol */,
+				0204A288DA4FBBE6595B4416 /* VitaTransport */,
+				9D0DE71788EF389727FB1974 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B65F743AFEB5D525470DE7C5 /* VitaBridgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				79F5B36294657F17C7ACDF41 /* ConnectionTests.swift */,
+				C3EC84B45FD9659216D16C74 /* ProtocolTests.swift */,
+			);
+			name = VitaBridgeTests;
+			path = Tests/VitaBridgeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		037CDABD60EA91C5E7C94603 /* VitaBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 649272A11C84742FE1315F76 /* Build configuration list for PBXNativeTarget "VitaBridge" */;
+			buildPhases = (
+				8938E6BDEA1DA0BD4CFFDC56 /* Sources */,
+				3FCFDE97BCEC632CCC5BC9A9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5D1A1C52358BB12ECE2F6A2 /* PBXTargetDependency */,
+				88BC505EC8086E8FDF687767 /* PBXTargetDependency */,
+				263A62CFC4F77C3B7281DBDF /* PBXTargetDependency */,
+				83DFFF989E3558AF7881161B /* PBXTargetDependency */,
+			);
+			name = VitaBridge;
+			packageProductDependencies = (
+			);
+			productName = VitaBridge;
+			productReference = 6ACDF4DF0F2E9E4B7B4C4354 /* VitaBridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		346B6D808DAB13E6AE44FC9B /* ControllerEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5FC7597C6ED12F9D4BD816E /* Build configuration list for PBXNativeTarget "ControllerEngine" */;
+			buildPhases = (
+				F17E9D287E6D463F25765643 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDB2E8C55626E7408AEBD778 /* PBXTargetDependency */,
+			);
+			name = ControllerEngine;
+			packageProductDependencies = (
+			);
+			productName = ControllerEngine;
+			productReference = 1130ADAAE609FE2FA05C4F5B /* ControllerEngine.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+		5DBED834919A9A4086281555 /* VitaTransport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA1F44E903807FFCB5E27062 /* Build configuration list for PBXNativeTarget "VitaTransport" */;
+			buildPhases = (
+				21B01694B1230A84D03292DD /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E94CA51EBE2824C517B4FFCD /* PBXTargetDependency */,
+			);
+			name = VitaTransport;
+			packageProductDependencies = (
+			);
+			productName = VitaTransport;
+			productReference = DBE9D0E98FE4D9500D14B89D /* VitaTransport.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+		AB0767FAB366725FCDB15715 /* VitaBridgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68DE7E219D88DC1B1FC17E6A /* Build configuration list for PBXNativeTarget "VitaBridgeTests" */;
+			buildPhases = (
+				A391FDCA73852573E5F8137A /* Sources */,
+				F8FF9BDD4E2AAE2DB41F0C46 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBAB9BB8E83F74DF1A41D576 /* PBXTargetDependency */,
+				8F4376CF863916987B923E3E /* PBXTargetDependency */,
+				45A6983372A31FF9A3B056A5 /* PBXTargetDependency */,
+				D1B593F79EB2CAA0555EFD40 /* PBXTargetDependency */,
+			);
+			name = VitaBridgeTests;
+			packageProductDependencies = (
+			);
+			productName = VitaBridgeTests;
+			productReference = FCC93DD65319DE95DBDCA268 /* VitaBridgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CCED1F5234EB3733E63ABE75 /* OutputBackends */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0CF904BC3AC4D0A76CFF68E /* Build configuration list for PBXNativeTarget "OutputBackends" */;
+			buildPhases = (
+				94F1A5B086FB621733EA8F3F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54BB2DC22AC24B8E5E9E04E3 /* PBXTargetDependency */,
+				31CF177B9C804282AE8CDA11 /* PBXTargetDependency */,
+			);
+			name = OutputBackends;
+			packageProductDependencies = (
+			);
+			productName = OutputBackends;
+			productReference = F9983E713CB3A2876F4EBCEB /* OutputBackends.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+		EEC24EC640E766C5352AE22D /* VitaProtocol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0538ED422562684903F73C5 /* Build configuration list for PBXNativeTarget "VitaProtocol" */;
+			buildPhases = (
+				6CA1B433075773BA7D24CCDC /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VitaProtocol;
+			packageProductDependencies = (
+			);
+			productName = VitaProtocol;
+			productReference = D8D5D6E3528E6EDDC06224D2 /* VitaProtocol.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4CB246EF50A7D995D01FE2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					037CDABD60EA91C5E7C94603 = {
+						ProvisioningStyle = Automatic;
+					};
+					346B6D808DAB13E6AE44FC9B = {
+						ProvisioningStyle = Automatic;
+					};
+					5DBED834919A9A4086281555 = {
+						ProvisioningStyle = Automatic;
+					};
+					AB0767FAB366725FCDB15715 = {
+						ProvisioningStyle = Automatic;
+					};
+					CCED1F5234EB3733E63ABE75 = {
+						ProvisioningStyle = Automatic;
+					};
+					EEC24EC640E766C5352AE22D = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5AAF6ACAC514D4193A9F2DC3 /* Build configuration list for PBXProject "VitaBridge" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B13869C7C8AA5DD1613EEADF;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9D0DE71788EF389727FB1974 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				346B6D808DAB13E6AE44FC9B /* ControllerEngine */,
+				CCED1F5234EB3733E63ABE75 /* OutputBackends */,
+				037CDABD60EA91C5E7C94603 /* VitaBridge */,
+				AB0767FAB366725FCDB15715 /* VitaBridgeTests */,
+				EEC24EC640E766C5352AE22D /* VitaProtocol */,
+				5DBED834919A9A4086281555 /* VitaTransport */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21B01694B1230A84D03292DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09621C00B8569B0477CA0059 /* LoopbackSimulator.swift in Sources */,
+				8859D3357A2AFBBBAFE5AB9E /* VitaConnectionManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA1B433075773BA7D24CCDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C897CEE5017675E526F1C28E /* ControllerState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8938E6BDEA1DA0BD4CFFDC56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D651FD89E5EE47B179053D47 /* AppModel.swift in Sources */,
+				D53FF5ACA13C6229CA7902BB /* ContentView.swift in Sources */,
+				14CE7796CAF7B310ACA0D3E4 /* MappingEditorView.swift in Sources */,
+				47CB4A277F51B27898F5A030 /* SettingsView.swift in Sources */,
+				CE753A1F4B0FFAFD9E10BEDC /* VitaBridgeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94F1A5B086FB621733EA8F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E30991515032899998AC831 /* ControllerOutputBackend.swift in Sources */,
+				59F3CC3EDD6D8374C2FBE2E7 /* NativeUSBControllerObserver.swift in Sources */,
+				6FC735FFD8C51BC4E0BA7593 /* ReleaseWatchdog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A391FDCA73852573E5F8137A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07FF007315C9A40F19F4E26B /* ConnectionTests.swift in Sources */,
+				A7CE88A94E4C1AD7249DA155 /* ProtocolTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F17E9D287E6D463F25765643 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250D287DFE42AFCAEC13915A /* InputMappingEngine.swift in Sources */,
+				B8E2F0C756263996D4A80199 /* Profiles.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		263A62CFC4F77C3B7281DBDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DBED834919A9A4086281555 /* VitaTransport */;
+			targetProxy = ABBD4350865E93CF61525FD7 /* PBXContainerItemProxy */;
+		};
+		31CF177B9C804282AE8CDA11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 346B6D808DAB13E6AE44FC9B /* ControllerEngine */;
+			targetProxy = AAEFA1D0EA0CD7C3718CC660 /* PBXContainerItemProxy */;
+		};
+		45A6983372A31FF9A3B056A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DBED834919A9A4086281555 /* VitaTransport */;
+			targetProxy = 556DAD32A35F15849965E4F6 /* PBXContainerItemProxy */;
+		};
+		54BB2DC22AC24B8E5E9E04E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEC24EC640E766C5352AE22D /* VitaProtocol */;
+			targetProxy = 6F43640BFE72AB860FC59641 /* PBXContainerItemProxy */;
+		};
+		83DFFF989E3558AF7881161B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCED1F5234EB3733E63ABE75 /* OutputBackends */;
+			targetProxy = 8F8694823683C6F5DBE96669 /* PBXContainerItemProxy */;
+		};
+		88BC505EC8086E8FDF687767 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 346B6D808DAB13E6AE44FC9B /* ControllerEngine */;
+			targetProxy = BFD455F30A12704DC0C54C18 /* PBXContainerItemProxy */;
+		};
+		8F4376CF863916987B923E3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 346B6D808DAB13E6AE44FC9B /* ControllerEngine */;
+			targetProxy = 5C40442047498C4DE76D4456 /* PBXContainerItemProxy */;
+		};
+		D1B593F79EB2CAA0555EFD40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCED1F5234EB3733E63ABE75 /* OutputBackends */;
+			targetProxy = F6D1184221235C38545C43B9 /* PBXContainerItemProxy */;
+		};
+		D5D1A1C52358BB12ECE2F6A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEC24EC640E766C5352AE22D /* VitaProtocol */;
+			targetProxy = 27B9E079E91FC8983CC5AA92 /* PBXContainerItemProxy */;
+		};
+		DBAB9BB8E83F74DF1A41D576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEC24EC640E766C5352AE22D /* VitaProtocol */;
+			targetProxy = 19E0B57694082F92AFCF5623 /* PBXContainerItemProxy */;
+		};
+		E94CA51EBE2824C517B4FFCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEC24EC640E766C5352AE22D /* VitaProtocol */;
+			targetProxy = 4270ACF80FA3E64614CA7F6A /* PBXContainerItemProxy */;
+		};
+		EDB2E8C55626E7408AEBD778 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEC24EC640E766C5352AE22D /* VitaProtocol */;
+			targetProxy = E3F8D6A57C4EFA01709F76FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E76D0D9185F364A58FDAE79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.app;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0EB59ADAA26E434FC092C054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		16766504CB45EA8353E8BD2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.output;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		19994F42E770B65DA5446162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.tests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1CA70DFBFC1EA335CDA7851E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.transport;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		25657C65F0BB057F39E4509A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		2D3858394253863321F51F25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.output;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		52341AC4ADF272138B54DD4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.protocol;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		54A65EE17F67F9E46A668186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.transport;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		77F338158B603B7A7AB59914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.engine;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		D0172EDEB241F298219D2093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.app;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DD7E187D0D14A2871E155F6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.engine;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		F6E634CBB7AE05660F332638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.protocol;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		FDD062B2D3D2D728C36DD7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.vitabridge.tests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AAF6ACAC514D4193A9F2DC3 /* Build configuration list for PBXProject "VitaBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EB59ADAA26E434FC092C054 /* Debug */,
+				25657C65F0BB057F39E4509A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		649272A11C84742FE1315F76 /* Build configuration list for PBXNativeTarget "VitaBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E76D0D9185F364A58FDAE79 /* Debug */,
+				D0172EDEB241F298219D2093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		68DE7E219D88DC1B1FC17E6A /* Build configuration list for PBXNativeTarget "VitaBridgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19994F42E770B65DA5446162 /* Debug */,
+				FDD062B2D3D2D728C36DD7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A0538ED422562684903F73C5 /* Build configuration list for PBXNativeTarget "VitaProtocol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52341AC4ADF272138B54DD4E /* Debug */,
+				F6E634CBB7AE05660F332638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A0CF904BC3AC4D0A76CFF68E /* Build configuration list for PBXNativeTarget "OutputBackends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16766504CB45EA8353E8BD2E /* Debug */,
+				2D3858394253863321F51F25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DA1F44E903807FFCB5E27062 /* Build configuration list for PBXNativeTarget "VitaTransport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54A65EE17F67F9E46A668186 /* Debug */,
+				1CA70DFBFC1EA335CDA7851E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E5FC7597C6ED12F9D4BD816E /* Build configuration list for PBXNativeTarget "ControllerEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7E187D0D14A2871E155F6C /* Debug */,
+				77F338158B603B7A7AB59914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4CB246EF50A7D995D01FE2F /* Project object */;
+}

@@ -1,0 +1,96 @@
+name: VitaBridge
+options:
+  deploymentTarget:
+    macOS: '14.0'
+settings:
+  base:
+    SWIFT_VERSION: '6.0'
+    MACOSX_DEPLOYMENT_TARGET: '14.0'
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: '-'
+    ENABLE_HARDENED_RUNTIME: YES
+    SWIFT_STRICT_CONCURRENCY: complete
+    ARCHS: '$(ARCHS_STANDARD)'
+    MARKETING_VERSION: '1.0'
+    CURRENT_PROJECT_VERSION: '1'
+targets:
+  VitaProtocol:
+    type: framework.static
+    platform: macOS
+    sources: [Sources/VitaProtocol]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.vitabridge.protocol
+        GENERATE_INFOPLIST_FILE: YES
+  ControllerEngine:
+    type: framework.static
+    platform: macOS
+    sources: [Sources/ControllerEngine]
+    dependencies:
+      - target: VitaProtocol
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.vitabridge.engine
+        GENERATE_INFOPLIST_FILE: YES
+  VitaTransport:
+    type: framework.static
+    platform: macOS
+    sources: [Sources/VitaTransport]
+    dependencies:
+      - target: VitaProtocol
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.vitabridge.transport
+        GENERATE_INFOPLIST_FILE: YES
+  OutputBackends:
+    type: framework.static
+    platform: macOS
+    sources: [Sources/OutputBackends]
+    dependencies:
+      - target: VitaProtocol
+      - target: ControllerEngine
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.vitabridge.output
+        GENERATE_INFOPLIST_FILE: YES
+  VitaBridge:
+    type: application
+    platform: macOS
+    sources: [Sources/VitaBridgeApp]
+    dependencies:
+      - target: VitaProtocol
+      - target: ControllerEngine
+      - target: VitaTransport
+      - target: OutputBackends
+    info:
+      path: Config/Info.plist
+      properties:
+        CFBundleDisplayName: VitaBridge
+        NSPrincipalClass: NSApplication
+        LSMinimumSystemVersion: '14.0'
+        NSLocalNetworkUsageDescription: VitaBridge discovers and receives controller input from your PS Vita on your local network.
+        NSHumanReadableCopyright: VitaBridge contributors
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.vitabridge.app
+        LD_RUNPATH_SEARCH_PATHS: '$(inherited) @executable_path/../Frameworks'
+  VitaBridgeTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources: [Tests/VitaBridgeTests]
+    dependencies:
+      - target: VitaProtocol
+      - target: ControllerEngine
+      - target: VitaTransport
+      - target: OutputBackends
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.vitabridge.tests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  VitaBridge:
+    build:
+      targets:
+        VitaBridge: all
+    test:
+      targets: [VitaBridgeTests]
